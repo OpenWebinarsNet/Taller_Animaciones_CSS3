@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poller One", cursive;
+  background-color: black;
+  color: #ff6;
+}
+
+#title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 300px;
+  animation-duration: 3s;
+  animation-name: fadeOut;
+  animation-timing-function: ease-out;
+  opacity: 0;
+}
+
+#slidingText {
+  width: 40%;
+  left: 30%;
+  margin: 0px auto;
+  font-size: 2rem;
+  position: fixed;
+  top: 100%;
+  animation-name: slideUp;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-duration: 25s;
+  animation-iteration-count: 1;
+  transform: perspective(300px) rotateX(15deg);
+  /* Para probar https://webcode.tools/css-generator/perspective */
+}
+
+#slidingText p {
+  text-align: justify;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -200%;
+    opacity: 0;
+  }
+}
